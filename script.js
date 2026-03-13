@@ -93,7 +93,7 @@ function animateCounter(el, target, duration = 1500) {
   const numMatch = target.match(/[\d,.]+/);
   if (!numMatch) return;
 
-  const numStr = numMatch[0].replace(/,/g, '');
+  const numStr = numMatch[0].replace(/[.,]/g, '');
   const num = parseFloat(numStr);
   const prefix = target.replace(numMatch[0], '').trim();
 
